@@ -1,0 +1,15 @@
+{
+  "data": "generated/BlendSpaces.luau",
+  "evaluator": "Blend1D.luau",
+  "entry": "evaluate",
+  "tolerance": 1e-12,
+  "cases": [
+    {"name": "below range clamps", "args": ["locomotion", -1], "expect": {"a": "idle", "weight": 0}},
+    {"name": "idle-walk midpoint", "args": ["locomotion", 1], "expect": {"a": "idle", "b": "walk", "weight": 0.5}},
+    {"name": "walk-run quarter", "args": ["locomotion", 3], "expect": {"a": "walk", "b": "run", "weight": 0.25}},
+    {"name": "above range clamps", "args": ["locomotion", 10], "expect": {"a": "run", "weight": 0}},
+    {"name": "lean right", "args": ["lean", 45], "expect": {"a": "upright", "b": "leanRight", "weight": 0.5}},
+    {"name": "unknown space errors", "args": ["swim", 1], "expectError": true},
+    {"name": "missing value errors", "args": ["locomotion", null], "expectError": true}
+  ]
+}

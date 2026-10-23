@@ -1,0 +1,6 @@
+{
+  "plugins": ["adapters.py"],
+  "targets": [
+    {"adapter": "blend1d", "inputs": ["data/locomotion.json"], "output": "generated/BlendSpaces.luau"}
+  ]
+}

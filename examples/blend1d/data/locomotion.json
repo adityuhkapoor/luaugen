@@ -1,0 +1,8 @@
+{
+  "blendSpaces": [
+    {"name": "locomotion", "parameter": "speed",
+     "samples": [{"at": 6, "clip": "run"}, {"at": 0, "clip": "idle"}, {"at": 2, "clip": "walk"}]},
+    {"name": "lean", "parameter": "turnRate",
+     "samples": [{"at": -90, "clip": "leanLeft"}, {"at": 0, "clip": "upright"}, {"at": 90, "clip": "leanRight"}]}
+  ]
+}
